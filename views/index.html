@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>HARY-IT - APi's</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg"/>
+
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/loader.js"></script>
+
+
+  
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" class="dashboard-analytics" />
+    <link rel="stylesheet" type="text/css" href="assets/css/elements/alert.css">
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+</head>
+<body class="dashboard-analytics">
+
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen"> <div class="loader"> <div class="loader-content">
+        <div class="spinner-grow align-self-center"></div>
+    </div></div></div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container fixed-top">
+       
+<header class="header navbar navbar-expand-sm">
+            <ul class="navbar-item flex-row">
+                <li class="nav-item align-self-center page-heading">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h3>Home</h3>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </a>
+
+            <ul class="navbar-item flex-row search-ul">
+                <li class="nav-item align-self-center search-animated">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <form class="form-inline search-full form-inline search" role="search">
+                        <div class="search-bar">
+                            <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="search ..">
+                        </div>
+                    </form>
+                </li>
+            </ul>
+
+            <ul class="navbar-item flex-row navbar-dropdown">
+               
+                
+                <li class="nav-item dropdown message-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="messageDropdown">
+                        <div class="">
+                           
+                           
+                        </div>
+                    </div>
+                </li>
+
+                
+
+            </ul>
+        </header>
+
+
+
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        
+
+
+
+      <!--  BEGIN SIDEBAR  -->
+        <div class="sidebar-wrapper sidebar-theme">
+            
+            <nav id="compactSidebar">
+
+                <div class="theme-logo">
+                    <a href="/">
+                        <img src="logo.jpg" class="navbar-logo" alt="">
+                    </a>
+                </div>
+
+                <ul class="menu-categories">
+                    <li class="menu menu-single active">
+                        <a href="/" data-active="true" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Dashboard</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#app" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>NSFW</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#uiKit" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Download</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#components" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Walpaper</span></div>
+                    </li>
+
+                     <li class="menu">
+                        <a href="#cecan" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Cecan</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#games" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Games</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#forms" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-ccw"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Encode & Decode</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#tables" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Random</span></div>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#more" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tooltip"><span>Other</span></div>
+                    </li>
+                </ul>
+
+                <div class="sidebar-bottom-actions">
+
+                 <div class="external-links">
+                        <a target="_blank" href="https://wa.me/6282273128721" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            <div class="tooltip"><span>Help</span></div>
+                        </a>
+                    </div>
+    
+                    <div class="dropdown user-profile-dropdown">
+                        <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="logo.jpg" class="img-fluid" alt="avatar">
+                        </a>
+                        <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+                            <div class="dropdown-inner">
+                                <div class="user-profile-section">
+                                    <div class="media mx-auto">
+                                        <img src="logo.jpg" class="img-fluid mr-2" alt="avatar">
+                                        <div class="media-body">
+                                            <h5>HARY-IT</h5>
+                                            <p>I'll Wait For U</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="https://github.com/MltrCyber"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> <span> Github</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="https://instagram/haryonokudadiri">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> <span> Instagram</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="https://facebook.com/haryono.franskudir.96">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> <span>Facebook</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="https://t.me/haryonokudadiri">
+                                        <i class="far fa-paper-plane"></i>     &nbsp; <span>Telegram</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </nav>
+
+            <div id="compact_submenuSidebar" class="submenu-sidebar">
+
+                
+
+                <div class="submenu" id="app">
+                    <div class="menu-title">
+                        <h3>NSFW</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#app"> 
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/ass"> ASS </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/ahegao"> Ahegao </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/bdsm"> Bdsm </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/blowjob"> Blowjob  </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/cuckold"> Cuckold </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/cum"> Cum </a>
+                        </li>
+                      
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/ero"> Ero  </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/femdom"> Femdom </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/foot"> Foot </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/gangbang"> Gangbang </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/glasses"> Glasses  </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/hentai"> Hentai </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/hentaigif"> Hentai GIF </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/jahi"> Jahi </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/mansturbation"> Mansturbation </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/neko"> Neko </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/orgy"> Orgy </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/panties"> Panties </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/pussy"> Pussy </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/thighs"> Thighs </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nsfw/yuri"> Yuri </a>
+                        </li>
+                      
+                    </ul>
+                </div>
+
+                <div class="submenu" id="uiKit">
+                    <div class="menu-title">
+                        <h3>Downloads</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#uiKit"> 
+                        
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/yutub/video?url=Maksukkan_URL&apikey="> ytmp4 </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/yutub/audio?url=MASUKKAN_URL&apikey="> ytmp3    </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/yutub/search?video=HARY-IT&apikey="> ytsearch </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/fbdown/?url=MASUKIN_URL&apikey="> Facebook </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/tiktod/?url=MASUKIN_URL&apikey="> Tiktok </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+
+                <div class="submenu" id="components">
+                    <div class="menu-title">
+                        <h3>Walpaper</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#components"> 
+                       <li>
+                            <a href="https://hary-api.herokuapp.com/api/wallpaper/teknologi?apikey=rina"> Teknology </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/wallpaper/programming?apikey=rina"> Programing </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/wallpaper/cyberspace?apikey=rina"> CyberSpace </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/wallpaper/pegunungan?apikey=rina"> Mountain View </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="submenu" id="games">
+                    <div class="menu-title">
+                        <h3>Games</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#games"> 
+                       <li>
+                            <a href="https://hary-api.herokuapp.com/api/kuis/caklontong?apikey=rina"> Cak Lontong </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/kuis/tebakgambar?apikey=rina"> Tebak Gambar </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/kuis/family100?apikey=rina"> Family 100 </a>
+                        </li>
+                       
+
+                    </ul>
+                </div>
+
+                <div class="submenu" id="forms">
+                    <div class="menu-title">
+                        <h3>Encode & Decode</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#forms">
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/base?apikey=rina&type=base64&encode=xx"> Encode Base64 </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/base?apikey=rina&type=base64&decode=xx"> Decode Base64 </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/base?apikey=rina&type=base32&encode=xx"> Encode Base32 </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/base?apikey=rina&type=base32&decode=xx"> Decode Base32 </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="submenu" id="cecan">
+                    <div class="menu-title">
+                        <h3>Cecan</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#forms">
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/cecan?apikey=rina"> Cecan </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/indonesia?apikey=rina"> Cecan Indonesia </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/vietnam?apikey=rina"> Cecan Vietnam </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/malaysia?apikey=rina"> Cecan Malaysia </a>
+                        </li>
+                         <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/korea?apikey=rina"> Cecan Korea </a>
+                        </li>
+                         <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/japan?apikey=rina"> Cecan Japan </a>
+                        </li>
+                         <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/china?apikey=rina"> Cecan China </a>
+                        </li>
+                         <li>
+                            <a href="https://hary-api.herokuapp.com/api/cewe/thailand?apikey=rina"> Cecan Thailand </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="submenu" id="tables">
+                    <div class="menu-title">
+                        <h3>Random Menu</h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#tables">
+                      <li>
+                            <a href="https://hary-api.herokuapp.com/api/randomquote?apikey=rina"> Qoutes </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/random/meme?apikey=rina"> Meme </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/random/wallpaper?apikey=rina"> Walpaper </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="submenu" id="more">
+                    <div class="menu-title">
+                        <h3>Other </h3>
+                    </div>
+                    <ul class="submenu-list" data-parent-element="#more">
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/nulis?text=hary&apikey="> Mager Nulis </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/infonpm?query=&hostname=?apikey=rina"> Info Npm </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/infogempa?apikey=rina"> Info Gempa Terkini </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/infocuaca?provinsi=sumaterautara?apikey=rina"> Info Cuaca Indonesia </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/infocuaca/dunia?apikey=rina"> Info Cuaca Dunia </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/infocuaca/bandara?apikey=rina"> Info Cuaca Bandara </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/infotsunami?apikey=rina"> Info Tsunami </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/covidindo?apikey=rina"> CoviD Indonesia </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/covidworld?apikey=rina"> Covid World </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/short/tiny?url=google.com?apikey=rina"> Short Link </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/wikipedia?search=jembatan?apikey=rina"> Wikipedia </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/drakorasia?search=tale?apikey=rina"> Drakor Asia </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/fakedata?country=en?apikey=rina"> Fake Data </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/hilih?kata=aku%20kan%20ganteng%20banget?apikey=rina"> Kata Hilih </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/liriklagu?lagu=sayang?apikey=rina"> Lirik Lagu </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/chordlagu?lagu=sayang?apikey=rina"> Chord Lagu </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/kbbi?kata=pohon?apikey=rina"> KBBI </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/kodepos?kota=jakarta?apikey=rina"> Kode Pos </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/translate?kata=hi?apikey=rina"> Translate </a>
+                        </li>
+                        <li>
+                            <a href="https://hary-api.herokuapp.com/api/gabut?apikey=rina"> Gabut </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"> Dah lAH aH anj Capek Bgsat !! </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--  END SIDEBAR  -->
+        
+        <!--  BEGIN CONTENT AREA  -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <div class="row layout-top-spacing">
+
+                    <div class="col-xl-8 col-lg-7 col-12">
+                        <div class="alert alert-light-primary border-0 notification-alert" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x close" data-dismiss="alert"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button> <span class="text-dark">Subscribe My Channel For New Update</span> <a href="https://youtube.com/channel/UCokeLP26Ck5yhl3rzotp_eA">Learn more</a> </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-5 col-12 layout-spacing text-right">
+
+                     <!--   <div class="notification-action-btns d-lg-block d-flex justify-content-between flex-sm-row flex-column">
+                            <button class="btn btn-primary  notification-action-btn mb-sm-0 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg> View Statistics </button>
+                            <button class="btn btn-dark  notification-action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download-cloud mr-1"><polyline points="8 17 12 21 16 17"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path></svg> Download Source </button>
+                        </div>-->
+
+                    </div>
+
+                   
+                    <div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Your IP</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+
+<div id="findipwidget"></div><div class="findiplink" id="findipurl">Source : <a href="http://www.find-ip.net/" target="_blank">Dari Sini</a></div><script defer src="https://api.find-ip.net/widget.js?width=240&country=0&language=0&region=0&system=0&bg=%23ffffff&border=white&textcol=grey&flag=0&"></script>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs"> 
+</span>
+<span>Your IP Information</span>
+</div>
+</div>
+<div class="col-auto">
+</div>
+</div>
+</div>
+</div>
+</div>
+            
+          <div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Api Key</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">hary</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+<span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 98.2%</span>
+<span>Since last month</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-fire fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+
+<div class="card h-100">
+
+<div class="card-body">
+
+<div class="row no-gutters align-items-center">
+
+<div class="col mr-2">
+
+<div class="text-xs font-weight-bold text-uppercase mb-1">Time</div>
+
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+
+<div class="jam" id="jam">00:00:00</div>
+
+</div>
+
+<div class="mt-2 mb-0 text-muted text-xs">
+
+</span>
+
+<span>Waktu Indonesia Barat</span>
+
+</div>
+
+</div>
+
+<div class="col-auto">
+
+<i class="far fa-clock fa-2x text-primary"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!--
+                    
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 layout-spacing">
+                        <div class="widget widget-three">
+                            <div class="widget-heading">
+                                <h5 class="">Summary</h5>
+
+                                <div class="task-action">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask" style="will-change: transform;">
+                                            <a class="dropdown-item" href="javascript:void(0);">View Report</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Edit Report</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Mark as Done</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="widget-content">
+
+<i class="fas fa-fire fa-2x text-primary"></i> <b>This web visitor</b>
+</div>
+
+                                    
+
+                               
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>-->
+
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Visitor</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+<div class="visitor" id="visitor">00</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+
+</span>
+<span>This web visitor</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-eye fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+                 
+                        <div id="flStackForm" class="col-lg-12 layout-spacing layout-top-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">                                
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Cara Pemasangan</h4>
+                                        </div>                                                                        
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    
+                                    <div class="code-section-container show-code">
+                                                
+                                        <button class="btn toggle-code-snippet"><span>Code</span></button>
+
+                                        <div class="code-section text-left">
+                                            <pre>
+    Cara Penginstalan Di Windows / Local
+        
+~ Masuk Ke Directory Project Ini example: "cd 'C:Haryono Frans Kudir/Downloads/Compressed/namafolderkamu' "
+~ Silakan Install Modules Dengan Perintah "npm i"
+~ Ketik "npm Start" Untuk Menjalankan Project :v
+~ Silakan Akses Web nya lewat Port Yg ditentukan "localhost:8080"
+
+    Cara Penginstalan Di HEROKU
+
+~ Upload Terlebih dahulu Project Ini Ke Github
+~ Silakan Masuk Ke heroku buat apps baru 
+~ Lalu Hubungkan heroku dengan github Kamu
+~ Deploy via Github dan Jalankan 
+~ Liat Hasil Di namaapps.herokuapp.com Ex: "hary-api.herokuapp.com"
+
+
+NOTE : Script Tidak Boleh Di Perjual belikan Script Boleh Digunakan Atas Izin Saya
+       "Silakan Follow Sosial Media Saya"
+
+       -- HARY-IT - Make Your Heart Comfortable --
+
+</pre>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+        <!--  END CONTENT AREA  -->
+
+    </div>
+
+                  
+
+
+    </div>
+            </div>
+
+
+                    
+                  
+ <script>
+  function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://api.countapi.xyz/hit/hary-api.herokuapp.com/visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visitor").textContent = data.value
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+  
+</script>
+<script type="text/javascript">
+// 1 detik = 1000
+window.setTimeout("waktu()",1000);  
+function waktu() {   
+var tanggal = new Date();  
+setTimeout("waktu()",1000);  
+document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+}
+</script>
+<script>
+                // Akhir Hitungan Mundur
+                var countDownDate = new Date("Jan 01, 2022 00:00:00").getTime();
+
+                // Update Hitungan Mundur Setiap 1 Detik
+                var x = setInterval(function() {
+
+                    // Mengambil Tanggal Dan Waktu
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Kalkulator Waktu Hari, Jam, Menit, Detik 
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Menampilkan Hasil Di Dalam element Menggunakan id="time"
+                    document.getElementById("time").innerHTML = days + "Hari  " + hours + "Jam " + minutes + "Menit " + seconds + "Detik ";
+
+                    // Ketika countdown timer sudah berakhir Maka Tulisan Berakhir
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("time").innerHTML = "Berakhir";
+                    }
+                }, 1000);
+            </script>
+
+ <div class="footer-wrapper">
+                <div class="footer-section f-section-1">
+                    <p class="">Copyright © 2022 <a target="_blank" href="https://instagram.com/haryonokudadiri">HARY-IT</a>, All rights reserved.</p>
+                </div>
+                <div class="footer-section f-section-2">
+                    <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
+                </div>
+            </div>
+        </div>
+        <!--  END CONTENT AREA  -->
+
+
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="plugins/apex/apexcharts.min.js"></script>
+    <script src="assets/js/dashboard/dash_1.js"></script>
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+  
+    
+  
+    <script src="plugins/highlight/highlight.pack.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/scrollspyNav.js"></script>
+</body>
+</html>
